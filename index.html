@@ -36,13 +36,13 @@
 	}
 
 	 
-	#map {
+<!-- 	#map {
 
 	  flex: 2;
 	  min-height: 300px;
 	  height: 60%;
 	}
-
+ -->
 	<!-- /* Optional, if you still need special Leaflet container settings */ -->
 	<!-- leaflet-container { -->
 	  <!-- width: 80%; -->
@@ -74,8 +74,14 @@
 	  background: #9dc183;
 	  color: white;
 	  border-radius: 3px;
-	  margin-top: 10px;	  
+	  margin-top: 10px;
+	  font-size: 18px;	  
 	}
+	
+	
+
+	
+	
 
 	.child-layers {
 	  display: none; /* hidden by default */
@@ -89,8 +95,28 @@
 	  gap: 8px;
 	  margin-bottom: 6px;
 	  line-height: 1;
+	  font-size: 16px;
+	  cursor: pointer;
 	}
 
+
+	.child-layers i {
+	  font-size: 16px;
+	}
+
+
+
+
+
+	/* Leaflet popups */
+	.leaflet-popup-content {
+	  font-size: 14px;
+	  line-height: 1.4;
+	}
+
+	.leaflet-popup-content b {
+	  font-size: 16px;
+	}
 		 
 	 
 		 #content {
@@ -174,7 +200,46 @@
 
 
 
+	@media only screen and (max-width: 600px) {
+
+	  /* Parent section headers */
+	  .parent-header {
+		font-size: 20px;   /* larger for easier tapping */
+	  }
+
+	  /* Child labels */
+	  .child-layers label {
+		font-size: 18px;
+	  }
+
+	  /* Icons inside child layers */
+	  .child-layers i {
+		font-size: 18px;
+	  }
+
+	  /* Leaflet popups */
+	  .leaflet-popup-content {
+		font-size: 18px;   /* larger text for readability */
+		line-height: 1.6;
+	  }
+
+	  .leaflet-popup-content b {
+		font-size: 20px;   /* make names/titles stand out */
+	  }
+
+	  /* Optional: keep popups from being too wide on phones */
+	  .leaflet-popup-content-wrapper {
+		max-width: 280px;
+	  }
+
+	  /* Optional: make popup close button easier to tap */
+	  .leaflet-popup-close-button {
+		font-size: 20px;
+	  }
+	}
+
  
+
  
  
 </style>
